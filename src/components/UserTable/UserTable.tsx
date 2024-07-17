@@ -6,6 +6,7 @@ import {
   userReducer,
 } from "src/state/userReducer";
 import { UserTableContext, UserTableDispatchContext } from "./UserTableContext";
+import { Fade } from "react-awesome-reveal";
 
 interface UserTableProps {}
 
@@ -16,7 +17,9 @@ const UserTable: React.FC<UserTableProps> = () => {
     <div className="max-w-screen w-[90vw]">
       <UserTableContext.Provider value={userData}>
         <UserTableDispatchContext.Provider value={dispatch}>
-          <DataTable columns={UserTableColumns} data={userData} />
+          <Fade delay={200}>
+            <DataTable columns={UserTableColumns} data={userData} />
+          </Fade>
         </UserTableDispatchContext.Provider>
       </UserTableContext.Provider>
     </div>
