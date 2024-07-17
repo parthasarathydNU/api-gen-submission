@@ -2,6 +2,9 @@
 
 This project demonstrates a simple React application implementing a user management table. It uses React components and `Context API` with a `reducer` for state management. The application is styled with Tailwind CSS and uses various components from Shadcn UI for a clean and modern user interface.
 
+## Loom Video WalkThrough 3:43 min
+🎥 [Video Walk Through](https://www.loom.com/share/fc6ba690a0c7454582f32cfc5f835499?sid=aaccb26b-9f0d-42c6-be33-b99629fcc580) 🎬
+
 ## Features
 
 - **User Display**: Displays attributes like ID, Name, Email, Role, Status, Sign Up Date, and Last Login in a table format.
