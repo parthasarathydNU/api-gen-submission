@@ -1,8 +1,6 @@
 import { User } from "src/api/types";
 import userData from "../api/sample_data.json";
 
-export const i = 10;
-
 export const initialUserState: User[] = userData as User[];
 
 export enum UserActionTypes {
