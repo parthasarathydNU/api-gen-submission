@@ -41,8 +41,6 @@ export function userReducer(users: any, action: UserAction) {
     case UserActionTypes.DELETED: {
       console.log("user deleted");
       const newUsers = users.filter((u: User) => u.id !== action.payload?.id);
-      console.log(newUsers);
-
       return newUsers;
     }
     default: {
