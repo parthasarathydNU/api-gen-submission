@@ -1,6 +1,7 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
+import React from "react";
 import { User } from "../../api/types";
 import { DataTableColumnHeader } from "../ui/data-table/DataTableHeader";
 import { UserTableRowActions } from "./UserTableRowActions";
@@ -117,6 +118,12 @@ export const UserTableColumns: ColumnDef<User>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Actions" />
     ),
-    cell: ({ row }) => <UserTableRowActions row={row} />,
+    cell: ({ row }) => (
+      <React.Fragment key={`${row.original.id}-${row.original.name}-${row.original.email}`}>
+
+        <UserTableRowActions row={row} />
+
+      </React.Fragment>
+    ),
   },
 ];
